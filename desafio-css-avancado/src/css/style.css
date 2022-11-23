@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+html{
+    background-color: var(--degrade-escuro);
+    background-size: cover;
+
+}
+
+body{
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    height: 100vh;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+    color: #fff;
+    padding: 60px;
+}
+
+header{
+    height: 100px;
+}
+
+.logo img{
+    width: 200px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info{
+    padding-left: 40px;
+}
+
+.info h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info p{
+    margin-bottom: 20px;
+}
+
+.info button{
+    margin-bottom: 20px;
+
+    background-color: #fff;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    color: var(--degrade-escuro);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.422);
+}
+
+.info button:hover{
+    background-color: var(--degrade-claro);
+    color: #fff;
+}
+
+.social{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rede-social{
+    margin: 10px;
+    color: #fff;
+
+}
+
+.rede-social:hover{
+   color: var(--degrade-claro);
+}
+
+/*   --- RESPONSIVO ---   */
+@media (max-width: 768px){
+    body{
+        text-align: center;
+    }
+    
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .social{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 425px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}

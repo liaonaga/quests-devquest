@@ -1,0 +1,5 @@
+:root{
+    --max-width-size: 1920px;
+    --degrade-escuro: hsl(257, 40%, 49%);
+    --degrade-claro: hsl(300, 69%, 71%);
+}
