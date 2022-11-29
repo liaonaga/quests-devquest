@@ -9,7 +9,7 @@ html{
 body{
     background-image: url(../images/bg-desktop.svg);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -17,6 +17,16 @@ body{
     color: #fff;
     padding: 60px;
 }
+
+.limita-secao{
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*   HEADER   */
 
 header{
     height: 100px;
@@ -29,14 +39,23 @@ header{
     flex-direction: row;
 }
 
-main {
+/*   MAIN   */
+
+.conteudo-principal {
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagem{
+    max-width: 600px;
 }
 
 .info{
-    padding-left: 40px;
+    padding: 0 20px;
+    max-width: 600px;
 }
 
 .info h1{
@@ -63,7 +82,11 @@ main {
 .info button:hover{
     background-color: var(--degrade-claro);
     color: #fff;
+    cursor: PO;
 }
+
+
+/*   FOOTER   */
 
 .social{
     display: flex;
@@ -81,21 +104,22 @@ main {
 }
 
 /*   --- RESPONSIVO ---   */
+
 @media (max-width: 768px){
     body{
         text-align: center;
     }
-    
-    main{
+    .conteudo-principal{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
     .social{
         display: flex;
         justify-content: center;
     }
-    
 }
 
 @media (max-width: 425px){
